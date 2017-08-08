@@ -9,41 +9,23 @@ public static void main(String[] args) {
 	String a3 = JOptionPane.showInputDialog("please insert a random number");
 	int answer3 = Integer.parseInt(a3);
 	
-	if(answer1 < answer2 && answer1<answer3 ){
-		if(answer2 < answer3){
-			JOptionPane.showMessageDialog(null, answer1 +" "+answer2+" " +answer3);
-		}
-		else	
+	if(answer1>answer2){		
+	int t = answer1;
+	answer1 = answer2;
+	answer2 = t;
 	}
-	else if(answer1 < answer2 && answer1<answer3){
-		if(answer2 > answer3){
-			JOptionPane.showMessageDialog(null, answer1 +" "+answer3+" " +answer2);
-		}}
 	
-	
-	if(answer2 < answer1 && answer2<answer3 ){
-		if(answer1 < answer3){
-			JOptionPane.showMessageDialog(null, answer2 +" "+answer1+" " +answer3);
-		}}
-	else if(answer1 < answer2 && answer1<answer3){
-		if(answer1 > answer3){
-			JOptionPane.showMessageDialog(null, answer2 +" "+answer3+" " +answer1);
-		}}
-
-	
-	if(answer3 < answer2 && answer3<answer1 ){
-		if(answer2 < answer1){
-			JOptionPane.showMessageDialog(null, answer3 +" "+answer2+" " +answer1);
+	if(answer1>answer3){		
+		int t = answer1;
+		answer1 = answer3;
+		answer3 = t;
 		}
-		else{
-			JOptionPane.showMessageDialog(null, answer3 +" "+answer1+" " +answer2);
+	if(answer2>answer3){
+		int t = answer2;
+		answer2 = answer3;
+		answer3 = t;
 		}
-	}
-	else if(answer1 < answer2 && answer1<answer3){
-		if(answer2 > answer3){
-			JOptionPane.showMessageDialog(null, answer3 +" "+answer1+" " +answer2);
-		}}
+	JOptionPane.showMessageDialog(null, answer1+" "+answer2+" "+answer3 );
+	JOptionPane.showMessageDialog(null, answer3+" "+answer2+" "+answer1 );
 
-	
-}
-}
+}}
